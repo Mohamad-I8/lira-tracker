@@ -1,5 +1,5 @@
 ICONS_DIR = dir .. "ui/icons/"
-UPDATE_URL = "https://raw.githubusercontent.com/mohamad-i8/lira-tracker/main/update.lua"
+UPDATE_URL = "https://raw.githubusercontent.com/mohamad-i8/lira-tracker/main/version.json"
 URL = "https://api-v2.sp-today.com/api/v1/overview?lang=ar&city=damascus"
 SP_TODAY_URL = "https://sp-today.com/"
 GOLD_URL = "https://sse.sp-today.com/snapshot"
