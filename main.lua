@@ -30,6 +30,9 @@ dofile(dir .. "ui/layout/cryptocurrency.lua")
 dofile(dir .. "ui/layout/crypto.lua")
 dofile(dir .. "ui/layout/main.lua")
 
+-- Get release info
+release_info = cjson.decode(io.open(dir .. "info.json", "r"):read("*a"))
+
 -- Global variables to store currency data
 currencies = {}
 current_currency_index = 1
