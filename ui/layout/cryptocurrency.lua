@@ -1,0 +1,45 @@
+function create_crypto_view(i, name, img)
+  return {
+    LinearLayout,
+    orientation = "vertical",
+    layout_width = "match_parent",
+    layout_height = "wrap_content",
+    gravity = "center_horizontal",
+    padding = "4dp",
+    {
+      ImageView,
+      id = "crypto_img_" .. i,
+      src = tostring(img),
+      padding = "6dp",
+      layout_width = "wrap_content",
+      layout_height = "wrap_content",
+    },
+    {
+      TextView,
+      id = "crypto_name_" .. i,
+      text = name,
+      textColor = "#ffffff",
+      textSize = "16sp",
+      typeface = Typeface.DEFAULT_BOLD,
+      padding = "2dp",
+      layout_width = "wrap_content",
+      layout_height = "wrap_content",
+    },
+    {
+      TextView,
+      id = "price_usd_" .. i,
+      textSize = "16sp",
+      padding = "6dp",
+      layout_width = "wrap_content",
+      layout_height = "wrap_content",
+    },
+    {
+      TextView,
+      id = "price_syp_" .. i,
+      textSize = "16sp",
+      padding = "6dp",
+      layout_width = "wrap_content",
+      layout_height = "wrap_content",
+    },
+  }
+end

@@ -1,0 +1,48 @@
+function create_carat_view(i, carat)
+  return {
+    LinearLayout,
+    orientation = "vertical",
+    layout_width = "match_parent",
+    layout_height = "wrap_content",
+    gravity = "center_horizontal",
+    padding = "4dp",
+    {
+      TextView,
+      id = "tv_" .. i,
+      text = tostring(carat),
+      textSize = "16sp",
+      textColor = "#ffffff",
+      padding = "6dp",
+      typeface=Typeface.DEFAULT_BOLD,
+      layout_width = "wrap_content",
+      layout_height = "wrap_content",
+      importantForAccessibility = "no",
+    },
+    {
+      TextView,
+      id = "name_" .. i,
+      textColor = "#ffffff",
+      textSize = "16sp",
+      typeface=Typeface.DEFAULT_BOLD,
+      padding = "6dp",
+      layout_width = "wrap_content",
+      layout_height = "wrap_content",
+    },
+    {
+      TextView,
+      id = "buy_" .. i,
+      textSize = "16sp",
+      padding = "6dp",
+      layout_width = "wrap_content",
+      layout_height = "wrap_content",
+    },
+    {
+      TextView,
+      id = "sell_" .. i,
+      textSize = "16sp",
+      padding = "6dp",
+      layout_width = "wrap_content",
+      layout_height = "wrap_content",
+    },
+  }
+end
