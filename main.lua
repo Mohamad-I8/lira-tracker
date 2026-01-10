@@ -19,9 +19,11 @@ import "android.content.DialogInterface"
 dir = package.searchpath("main",package.path):match("(.*)main.lua")
 
 -- Execute other project files
+dofile(dir .. "update.lua")
 dofile(dir .. "constants.lua")
 dofile(dir .. "utils.lua")
 dofile(dir .. "fetch.lua")
+dofile(dir .. "ui/layout/update.lua")
 dofile(dir .. "ui/layout/flag.lua")
 dofile(dir .. "ui/layout/web.lua")
 dofile(dir .. "ui/layout/carat.lua")
@@ -31,7 +33,7 @@ dofile(dir .. "ui/layout/crypto.lua")
 dofile(dir .. "ui/layout/main.lua")
 
 -- Get release info
-release_info = cjson.decode(io.open(dir .. "info.json", "r"):read("*a"))
+release_info = cjson.decode(io.open(dir .. "version.json", "r"):read("*a"))
 
 -- Global variables to store currency data
 currencies = {}
@@ -160,3 +162,5 @@ end
 
 -- Run the project
 main()
+
+check_for_updates()
