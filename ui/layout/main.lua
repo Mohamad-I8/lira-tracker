@@ -14,7 +14,7 @@ main_layout = {
     gravity = "center_vertical",
     {
       TextView,
-      text = "Lira Tracker",
+      text = "Lira Tracker Test",
       textSize = 22,
       textColor = "#ffffff",
       typeface=Typeface.DEFAULT_BOLD,
